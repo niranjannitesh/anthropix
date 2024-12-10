@@ -10,4 +10,11 @@ defmodule Anthropix.APIError do
     ])
   end
 
+  def exception(error) do
+    struct(__MODULE__, 
+      type: "Unknown Error", 
+      message: inspect(error)
+    )
+  end
+
 end
